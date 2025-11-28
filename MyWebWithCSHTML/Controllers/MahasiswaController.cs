@@ -3,12 +3,12 @@ using MyWebWithCSHTML.Models;
 
 namespace MyWebWithCSHTML.Controllers;
 
-public class MuridController : Controller
+public class MahasiswaController : Controller
 {
-    private static List<Murid> _muridList = new List<Murid>
+    private static List<Mahasiswa> _muridList = new List<Mahasiswa>
     {
-        new Murid { Id = 1, Nama = "Akbar", NIS = "A1B1C1", Kelas = "3DKV", Umur = 19 },
-        new Murid { Id = 2, Nama = "Faisal", NIS = "A2B2C1", Kelas = "2RPL", Umur = 17 },
+        new Mahasiswa { Id = 1, Nama = "Akbar", NIS = "A1B1C1", Kelas = "3DKV", Umur = 19 },
+        new Mahasiswa { Id = 2, Nama = "Faisal", NIS = "A2B2C1", Kelas = "2RPL", Umur = 17 },
     };
     
     public IActionResult Index()
@@ -30,24 +30,24 @@ public class MuridController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Murid murid)
+    public IActionResult Create(Mahasiswa mahasiswa)
     {
-        murid.Id = _muridList.Max(m => m.Id) + 1;
-        _muridList.Add(murid);
+        mahasiswa.Id = _muridList.Max(m => m.Id) + 1;
+        _muridList.Add(mahasiswa);
 
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult Edit(Murid murid)
+    public IActionResult Edit(Mahasiswa mahasiswa)
     {
-        var existing = _muridList.FirstOrDefault(m => m.Id == murid.Id);
+        var existing = _muridList.FirstOrDefault(m => m.Id == mahasiswa.Id);
         if (existing == null) return NotFound();
 
-        existing.Nama = murid.Nama;
-        existing.NIS = murid.NIS;
-        existing.Kelas = murid.Kelas;
-        existing.Umur = murid.Umur;
+        existing.Nama = mahasiswa.Nama;
+        existing.NIS = mahasiswa.NIS;
+        existing.Kelas = mahasiswa.Kelas;
+        existing.Umur = mahasiswa.Umur;
 
         return RedirectToAction("Index");
     }

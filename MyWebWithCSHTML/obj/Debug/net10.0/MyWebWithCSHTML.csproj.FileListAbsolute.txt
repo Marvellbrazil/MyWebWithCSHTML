@@ -95,3 +95,4 @@ C:\Users\Marvell\RiderProjects\MyWebWithCSHTML\MyWebWithCSHTML\obj\Debug\net10.0
 C:\Users\Marvell\RiderProjects\MyWebWithCSHTML\MyWebWithCSHTML\obj\Debug\net10.0\MyWebWithCSHTML.pdb
 C:\Users\Marvell\RiderProjects\MyWebWithCSHTML\MyWebWithCSHTML\obj\Debug\net10.0\MyWebWithCSHTML.genruntimeconfig.cache
 C:\Users\Marvell\RiderProjects\MyWebWithCSHTML\MyWebWithCSHTML\obj\Debug\net10.0\ref\MyWebWithCSHTML.dll
+C:\Users\Marvell\RiderProjects\MyWebWithCSHTML\MyWebWithCSHTML\obj\Debug\net10.0\MyWebWithCSHTML.sourcelink.json
